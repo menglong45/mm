@@ -15,17 +15,13 @@ int main(void)
     for (i = 1; i <= n; i++) //控制行数
     {
         for (j = 0; j <= i - 1; j++)
-        {
             printf(" ");
-        }
         printf("w");
         for (k = 1; k < 12 - j * 2; k++)
             printf(" ");
         printf("w");
         for (b = 0; b <= 2*(i - 1); b++)
-        {
             printf(" ");
-        }
         printf("w");
         for (c = 1; c <= 10 - b ; c++)
             printf(" ");
