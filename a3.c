@@ -1,19 +1,25 @@
 #include <stdio.h>
+#define N 5
+int findmin(int a[], int n);
 int main(void)
 {
-    int a[5], i, max;
+    int a[5], i,min;
     for (i = 0; i < 5; i++)
     {
         scanf("%d", &a[i]);
     }
-    for (i = 1; i < 5; i++)
-    {
-        if (a[0] < a[i])
-        {
-            a[0] = a[i];
-        }
-        max = a[0];
-    }
-    printf("%d", max);
+     min=findmin(a, N);
+    printf("%d", min);
 }
-//if(a[i]>a[max]){max=i;}
+int findmin(int a[], int n)
+{
+    int i, min=0;
+    for (i = 0; i < n; i++)
+    {
+        if (a[i] < a[min])
+        {
+            min=i;
+        }
+    }
+    return a[min];
+}
