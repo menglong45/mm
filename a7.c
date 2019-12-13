@@ -7,6 +7,6 @@ int main(void)
     scanf("%d", n);
     for (i = 1; i < n; i++)
         scanf("%d", a[i]);
-
+       for(i=)
     return 0;
 }

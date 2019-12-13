@@ -3,11 +3,11 @@
 int fblaq(int n);
 int main(void)
 {
-    int y,n;
+    int y, n;
     printf("enter n:");
     scanf("%d", &n);
-     y=fblaq(n);
-    printf("兔子总数：%d",y);
+    y = fblaq(n);
+    printf("兔子总数：%d", y);
     return 0;
 }
 int fblaq(int n)
