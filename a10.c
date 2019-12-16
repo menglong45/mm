@@ -1,20 +1,32 @@
 #include <stdio.h>
-#define n 5
-
-int main(void)
+#define len 5
+int findmax(int a[], int n)
 {
-    int a[5] = {12, 58, 95, 84, 58}, i, j, t;
-    for (i = 0; i < n - 1; i++)
-        for (j = i + 1; j < n; j++)
+    int max = 0, i;
+    for (i = 1; i < n; i++)
+    {
+
+        if (a[i] > a[max])
         {
-            if (a[j] > a[i])
-            {
-                t = a[j];
-                a[j] = a[i];
-                a[i] = t;
-            }
+            max = i;
         }
-    for (i = 0; i < 5; i++)
+    }
+
+    return max;
+}
+
+int main()
+{
+    int a[5] = {12, 58, 2, 1, 98}, i, t;
+    for (i = len - 1; i > 0; i--)
+    {
+        int max = findmax(a, i + 1);
+        t = a[max];
+        a[max] = a[i];
+        a[i] = t;
+    }
+
+    for ( int i = 0; i < len; i++)
         printf(" %d ", a[i]);
     return 0;
 }
