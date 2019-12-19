@@ -8,7 +8,6 @@ int main(void)
 
         {
             printf("%d\t", n);
-            
         }
 
         n++;
