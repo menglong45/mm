@@ -13,7 +13,7 @@ int main(void)
     }
 }*/
 #include <stdio.h>
-int fact(int x)
+unsigned int fact(int x)
 {
     if (x == 1)
     {
