@@ -7,12 +7,10 @@ w        ww        w
     ww        ww               */
 //  1.控制行数  2.控制输出w  3.控制输出空格  4控制换行符 //
 #include <stdio.h>
-int main(void)
+void sum(int x)
 {
-    int i, j, k, n, b, c;
-    printf("enter n:");
-    scanf("%d", &n);
-    for (i = 1; i <= n; i++) //控制行数
+    int i, k, j;
+    for (i = 1; i <= x; i++) //控制行数
     {
         for (j = 0; j <= i - 1; j++)
             printf(" ");
@@ -20,13 +18,23 @@ int main(void)
         for (k = 1; k < 12 - j * 2; k++)
             printf(" ");
         printf("w");
-        for (b = 0; b <= 2*(i - 1); b++)
+        printf("\n");
+    }
+}
+int main(void)
+{
+    int i, j, k, n, b, c;
+    printf("enter n:");
+    scanf("%d", &n);
+    sum(n);
+    printf("\t");
+    sum(n);
+    /*for (b = 0; b <= 2*(i - 1); b++)
             printf(" ");
         printf("w");
         for (c = 1; c <= 10 - b ; c++)
             printf(" ");
         printf("w");
-        printf("\n");
-    }
+        printf("\n");*/
     return 0;
 }
